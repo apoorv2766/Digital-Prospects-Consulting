@@ -1,6 +1,7 @@
 "use client"
+import { useState } from "react"
+import UserGuide from "../images/userguide.jpg"
 
-import React from "react"
 
 const menuItems = [
   "Benefits Of Hiring Developers",
@@ -22,10 +23,10 @@ const benefits = [
 ]
 
 export default function GuideSection() {
-  const [activeMenu, setActiveMenu] = React.useState(1)
+  const [activeMenu, setActiveMenu] = useState(1)
 
   return (
-    <section className="bg-gradient-to-r from-cyan-50 via-white to-pink-50 py-16 md:py-24">
+    <section className="bg-linear-to-r from-cyan-50 via-white to-pink-50 py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12 text-center">
           User Guide To Hire Dedicated Software Developers
@@ -78,7 +79,7 @@ export default function GuideSection() {
 
             {/* Image Placeholder */}
             <div className="bg-gray-800 h-56 rounded-lg flex items-center justify-center overflow-hidden">
-              <img src="/developer-working-at-computer-with-code.jpg" alt="Developer working" className="w-full h-full object-cover" />
+              <img src={UserGuide.src} alt="Developer working" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

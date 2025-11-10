@@ -1,4 +1,4 @@
-import topCompanyImage from "../top_compony.jpg";
+import TopCompanyImage from "../images/top_compony.jpg";
 
 const trustFeatures = [
   "Client-Centric Approach",
@@ -11,14 +11,16 @@ const trustFeatures = [
 
 export default function CompaniesSection() {
   return (
-    <section className="bg-gradient-to-b from-pink-50 to-white py-16 md:py-24">
+    <section className="bg-linear-to-b from-pink-50 to-white py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left - Illustration */}
-          <div className="h-96 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center">
+          <div className="h-96 bg-linear-to-br  flex items-center justify-center overflow-hidden">
             <div className="text-center">
-              <div className="text-6xl mb-4">💻</div>
-              <p className="text-gray-600">Developer at Work</p>
+              <img 
+                src={TopCompanyImage.src}
+                alt="Developer at Work"
+              />
             </div>
           </div>
 

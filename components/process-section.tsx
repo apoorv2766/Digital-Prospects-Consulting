@@ -27,7 +27,7 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="bg-gradient-to-r from-cyan-50 via-white to-pink-50 py-16 md:py-24">
+    <section className="bg-linear-to-r from-cyan-50 via-white to-pink-50 py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Hiring Process</h2>

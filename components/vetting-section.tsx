@@ -2,7 +2,7 @@ import vettingPhoto from "../images/photo2.jpg";
 
 export default function VettingSection() {
   return (
-    <section className="bg-gradient-to-b from-white to-rose-50 py-16 md:py-24 relative overflow-hidden">
+    <section className="bg-linear-to-b from-white to-rose-50 py-16 md:py-24 relative overflow-hidden">
       {/* Decorative wavy lines on right */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-10">
         <svg width="150" height="300" viewBox="0 0 150 300" className="text-gray-400">

@@ -180,19 +180,24 @@ const technologies = [
     bgColor: "bg-pink-50",
     borderColor: "border-b-4 border-pink-400",
   },
-]
+];
 
 export default function TechStackSection() {
   return (
     <section className="bg-pink-50 py-16 md:py-24 relative">
-      <div className="absolute top-8 left-8 text-gray-400 text-4xl opacity-50">↗</div>
+      <div className="absolute top-8 left-8 text-gray-400 text-4xl opacity-50">
+        ↗
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">Our Diverse Technology Competency</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            Our Diverse Technology Competency
+          </h2>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The
-            Industry's Standard Dummy Text Ever Since
+            Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
+            Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text
+            Ever Since
           </p>
         </div>
 
@@ -205,17 +210,26 @@ export default function TechStackSection() {
               <div className="text-4xl mb-4">
                 {tech.iconImg && (
                   <img
-                    src={typeof tech.iconImg === "string" ? tech.iconImg : (tech.iconImg?.src ?? "")}
+                    src={
+                      typeof tech.iconImg === "string"
+                        ? tech.iconImg
+                        : tech.iconImg?.src ?? ""
+                    }
                     alt={tech.name + " icon"}
                     style={tech.iconStyle as React.CSSProperties}
                   />
                 )}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-6">{tech.name}</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-6">
+                {tech.name}
+              </h3>
 
               <div className="flex flex-wrap gap-2">
                 {tech.techs.map((t) => (
-                  <span key={t} className="text-xs font-semibold text-gray-700 px-2 py-1">
+                  <span
+                    key={t}
+                    className="text-xs font-semibold text-gray-700 px-2 py-1"
+                  >
                     {t}
                   </span>
                 ))}
@@ -225,5 +239,5 @@ export default function TechStackSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
