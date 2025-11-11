@@ -1,27 +1,33 @@
+import Krish1 from "../images/krish1.jpg"
+import Krish2 from "../images/krish2.jpg"
+import Krish3 from "../images/krish3.jpg"
+import Krish4 from "../images/krish4.jpg"
+
 export default function TestimonialsSection() {
+
   const testimonials = [
     {
       name: "Krish Bruynson",
       title: "Director, Starloft",
-      image: "/professional-man-with-glasses.jpg",
+      image: Krish1,
       stars: 5,
     },
     {
       name: "Krish Bruynson",
       title: "Director, Starloft",
-      image: "/smiling-woman.png",
+      image: Krish2,
       stars: 5,
     },
     {
       name: "Krish Bruynson",
       title: "Director, Starloft",
-      image: "/man-smiling.jpg",
+      image: Krish3,
       stars: 5,
     },
     {
       name: "Krish Bruynson",
       title: "Director, Starloft",
-      image: "/professional-man.png",
+      image: Krish4,
       stars: 5,
     },
   ]
@@ -40,14 +46,15 @@ export default function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="text-center">
               {/* Image card with play button overlay */}
-              <div className="relative mb-4 rounded-lg overflow-hidden">
+              <div className="relative mb-4 overflow-hidden">
                 <img
-                  src={testimonial.image || "/placeholder.svg"}
+                  src={typeof testimonial.image === "string" ? testimonial.image : testimonial.image.src}
                   alt={testimonial.name}
-                  className="w-full h-48 object-cover"
+                  className="object-cover mx-auto"
+                  style={{ width: "263.5px", height: "301px", transform: "rotate(0deg)", opacity: 1 }}
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition">
-                  <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center transition">
+                  <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center translate-y-20 transition-transform">
                     <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
                     </svg>

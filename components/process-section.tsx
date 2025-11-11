@@ -1,25 +1,30 @@
+import Enquiry from "../images/enquiry.png";
+import Select_developer from "../images/select_developer.png";
+import Team_integration from "../images/team_intregation.png";
+import Team_scaling from "../images/team_scaling.png";  
+
 const steps = [
   {
     number: "1",
-    icon: "❓",
+    icon: Enquiry,
     title: "INQUIRY",
     description: "Lorem ipsum is Simply Dummy Text Of The Printing And Typesetting Industry.",
   },
   {
     number: "2",
-    icon: "💻",
+    icon: Select_developer,
     title: "SELECT DEVELOPERS",
     description: "Lorem ipsum is Simply Dummy Text Of The Printing And Typesetting Industry.",
   },
   {
     number: "3",
-    icon: "👤",
+    icon: Enquiry,
     title: "TEAM INTEGRATION",
     description: "Lorem ipsum is Simply Dummy Text Of The Printing And Typesetting Industry.",
   },
   {
     number: "4",
-    icon: "🪟",
+    icon: Select_developer,
     title: "TEAM SCALING",
     description: "Lorem ipsum is Simply Dummy Text Of The Printing And Typesetting Industry.",
   },
@@ -42,13 +47,17 @@ export default function ProcessSection() {
               <div key={index} className="flex flex-col items-center">
                 {/* Circle with border */}
                 <div className="relative mb-6 w-full flex justify-center">
-                  <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center border-4 border-emerald-500 relative">
+                  <div className="w-40 h-40 bg-white rounded-full flex items-center justify-center border-2 border-emerald-500 relative text-4xl">
                     {/* Pink numbered badge */}
                     <div className="absolute -top-3 -right-3 w-10 h-10 bg-rose-400 rounded-full flex items-center justify-center text-white font-bold text-lg">
                       {step.number}
                     </div>
                     {/* Icon */}
-                    <span className="text-4xl">{step.icon}</span>
+                    {typeof step.icon === "string" ? (
+                      step.icon
+                    ) : (
+                      <img src={step.icon.src} alt="Enquiry" className="w-40 h-40 object-contain" />
+                    )}
                   </div>
 
                   {/* Connecting arrow - hidden on last item */}
